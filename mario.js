@@ -1,7 +1,3 @@
-
-printPyramid(5);
-
-
 /*
  * printPyramid
  *
@@ -13,11 +9,41 @@ printPyramid(5);
  *       #####
  *      ######
  */
+
+drawPyramid(5);
+
+function drawPyramid(height){
+  for (var row = 0; row < height; row++){
+    var numBricks = row + 2;
+    var numSpaces = height - row - 1;
+
+    var rowStr = "";
+    for (var i = 0; i < numSpaces; i++){
+      rowStr += ".";
+    }
+    for (var i = 0; i < numBricks; i++){
+      rowStr += "#";
+    }
+    
+    console.log(rowStr);
+  }
+}
+
+printPyramid(5)
+
 function printPyramid(height) {
-    console.log("Uh oh... the pyramid is under construction.");
-    console.log("Check back soon, our developers are hard at work as we speak!");
-
-    // TODO
-    // print that pyramid!
-
+  for (var row = 0; row < height; row++){
+    var numBricks = row + 2;
+    var numSpaces = height - row - 1;
+    
+    var rowStr = "";
+    for (var i = 0; i < numSpaces; i++){
+      rowStr = ".";
+    }
+    for (var i = 0; i < numBricks; i++){
+      rowStr += "#";
+    }
+    
+    console.log(rowStr);
+  }
 }
